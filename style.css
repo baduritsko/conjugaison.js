@@ -4,6 +4,7 @@ body
 	justify-content: center;
 	background-color: darkslategrey;
 	margin: 50px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 h2
 {
@@ -14,7 +15,6 @@ h2
 	border-radius: 30% 15%;
 	background: linear-gradient(to right, blueviolet, orange);
 	width: 400px;
-	font-family: Arial, Helvetica, sans-serif;
 	padding: 20px;
 	color: whitesmoke;
 	text-align: center;
@@ -37,4 +37,11 @@ h2
 	background: linear-gradient(to left, blueviolet, orange);
 	color: whitesmoke;
 	padding: 10px;
+}
+.footerDisplay
+{
+	position: fixed;
+	bottom: 2px;
+	right: 2px;
+	color: white;
 }
