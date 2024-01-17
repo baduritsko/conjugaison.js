@@ -40,7 +40,7 @@ function checkValeurs(valeur, min, max) {
 }
 
 function checkProposition() {
-	if(document.getElementById("valeurProposee").value == verbes[verbe][personne]) {
+	if(document.getElementById("valeurProposee").value.toLowerCase() == verbes[verbe][personne]) {
 		nbPoints++;
 		let pourcentage = ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
 		if(nbPoints > 1) document.getElementById("affichagePoints").innerHTML = nbPoints + " points" + pourcentage;
