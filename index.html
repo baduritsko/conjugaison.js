@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Conjugaison</title>
+	<link href="style.css" rel="stylesheet" />
+	<script type='text/javascript' src='conjugaison.js'></script>
+</head>
+<body>
+	<div class="zoneJeu">
+		<h2>Conjugaison</h2>
+		<span id="personne" class="valeurProposee"></span>
+		<input type="text" id="valeurProposee" name="valeurProposee" class="valeurProposee" onchange="checkProposition();" placeholder="" />
+		<br />
+		<br />
+		<div id="commentaire">C'est parti !</div>
+		<div id="affichagePoints">0 point</div>
+	</div>
+</body>
+</html>
