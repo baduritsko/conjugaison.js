@@ -26,12 +26,18 @@ var verbes = [
 	["vendre au présent", "vends", "vends", "vend", "vendons", "vendez", "vendent"],
 	["vendre à l'imparfait", "vendais", "vendais", "vendait", "vendions", "vendiez", "vendaient"],
 	["dire au présent", "dis", "dis", "dit", "disons", "dites", "disent"],
-	["dire à l'imparfait", "disais", "disais", "disait", "disions", "disiez", "disaient"]
+	["dire à l'imparfait", "disais", "disais", "disait", "disions", "disiez", "disaient"],
+	["dire au futur simple", "dirai", "diras", "dira", "dirons", "direz", "diront"],
+	["être au futur simple", "serai", "seras", "sera", "serons", "serez", "seront"],
+	["avoir au futur simple", "aurai", "auras", "aura", "aurons", "aurez", "auront"],
+	["finir au futur simple", "finirai", "finiras", "finira", "finirons", "finirez", "finiront"],
+	["venir au futur simple", "viendrai", "viendras", "viendra", "viendrons", "viendrez", "viendront"],
+	["aller au futur simple", "irai", "iras", "ira", "irons", "irez", "iront"]
 ];
 
 var verbe;
 var personne;
-var nbEssais = 1;
+var nbEssais = 0;
 var nbPoints = 0;
 
 
@@ -43,14 +49,15 @@ function checkProposition() {
 	if(document.getElementById("valeurProposee").value.toLowerCase() == verbes[verbe][personne]) {
 		nbPoints++;
 		let pourcentage = ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
-		if(nbPoints > 1) document.getElementById("affichagePoints").innerHTML = nbPoints + " points" + pourcentage;
-		else document.getElementById("affichagePoints").innerHTML = nbPoints + " point" + pourcentage;
 		document.getElementById("commentaire").innerHTML = "Bonne réponse";
 	}
 	else
 	{
 		document.getElementById("commentaire").innerHTML = "Mauvaise réponse, il fallait répondre <i>" + verbes[verbe][personne] + "</i>.";
 	}
+	let pourcentage = ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
+	if(nbPoints > 1) document.getElementById("affichagePoints").innerHTML = nbPoints + " points" + pourcentage;
+	else document.getElementById("affichagePoints").innerHTML = nbPoints + " point" + pourcentage;
 	nouvelleQuestion();
 }
 
