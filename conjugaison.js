@@ -1,8 +1,46 @@
-//GPL-3.0-or-later
+﻿var verbe;
+var personne;
+var nbEssais = 0;
+var nbPoints = 0;
+var commentaire;
+var reponseUtilisateur;
 
+document.addEventListener("DOMContentLoaded", (event) => {
+	commentaire = document.getElementById("commentaire");
+	reponseUtilisateur = document.getElementById("reponse");
+	nouvelleQuestion();
+  });
 
-var personnes = ["", "je/j'", "tu", "il/elle/on", "nous", "vous", "elles/ils"];
-var verbes = [
+function checkProposition() {
+	const valeurProposee = reponseUtilisateur.value.trim().toLowerCase();
+	if(!valeurProposee) {
+		reponseUtilisateur.value = "";
+		commentaire.innerHTML = "Veuillez saisir une réponse";
+		return;
+	}
+	if(valeurProposee == verbe[personne]) {
+		nbPoints++;
+		commentaire.innerHTML = "Bonne réponse";
+	}
+	else
+	{
+		commentaire.innerHTML = "Mauvaise réponse, il fallait répondre <i>" + verbe[personne] + "</i>.";
+	}
+	document.getElementById("score").innerHTML = nbPoints + (nbPoints > 1 ? " points": " point") + ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
+	nouvelleQuestion();
+}
+
+function nouvelleQuestion() {
+	nbEssais++;
+	verbe = verbes[Math.floor(Math.random() * verbes.length)];
+	personne = Math.floor(Math.random() * (verbe.length - 1)) + 1;
+	document.getElementById("personne").innerHTML = personnes[personne];
+	reponseUtilisateur.placeholder = verbe[0];
+	reponseUtilisateur.value = "";
+}
+
+const personnes = ["", "je/j'", "tu", "il/on", "nous", "vous", "ils", "elle", "elles"];
+const verbes = [
 	// ÊTRE
 	["être au présent", "suis", "es", "est", "sommes", "êtes", "sont"],
 	["être à l'imparfait", "étais", "étais", "était", "étions", "étiez", "étaient"],
@@ -23,14 +61,14 @@ var verbes = [
 	["finir au futur simple", "finirai", "finiras", "finira", "finirons", "finirez", "finiront"],
 	["finir au passé simple", "finis", "finis", "finit", "finîmes", "finîtes", "finirent"],
 	["finir au passé composé", "ai fini", "as fini", "a fini", "avons fini", "avez fini", "ont fini"],
-
+	
 	// VENIR
 	["venir au présent", "viens", "viens", "vient", "venons", "venez", "viennent"],
 	["venir à l'imparfait", "venais", "venais", "venait", "venions", "veniez", "venaient"],
 	["venir au futur simple", "viendrai", "viendras", "viendra", "viendrons", "viendrez", "viendront"],
 	["venir au passé simple", "vins", "vins", "vint", "vînmes", "vîntes", "vinrent"],
-	["venir au passé composé", "suis venu", "es venu", "est venu", "sommes venus", "êtes venus", "sont venus"],
-
+	["venir au passé composé", "suis venu", "es venu", "est venu", "sommes venus", "êtes venus", "sont venus", "est venue", "sont venues"],
+	
 	// ALLER
 	["aller au présent", "vais", "vas", "va", "allons", "allez", "vont"],
 	["aller à l'imparfait", "allais", "allais", "allait", "allions", "alliez", "allaient"],
@@ -171,43 +209,3 @@ var verbes = [
 	["chanter au passé simple", "chantai", "chantas", "chanta", "chantâmes", "chantâtes", "chantèrent"],
 	["chanter au passé composé", "ai chanté", "as chanté", "a chanté", "avons chanté", "avez chanté", "ont chanté"]
 ];
-
-
-var verbe;
-var personne;
-var nbEssais = 0;
-var nbPoints = 0;
-
-
-function checkValeurs(valeur, min, max) {
-	return (valeur < min && valeur > max);
-}
-
-function checkProposition() {
-	if(document.getElementById("valeurProposee").value.toLowerCase() == verbes[verbe][personne]) {
-		nbPoints++;
-		let pourcentage = ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
-		document.getElementById("commentaire").innerHTML = "Bonne réponse";
-	}
-	else
-	{
-		document.getElementById("commentaire").innerHTML = "Mauvaise réponse, il fallait répondre <i>" + verbes[verbe][personne] + "</i>.";
-	}
-	let pourcentage = ", réussite " + Math.round(100 * nbPoints / nbEssais, 0) + "%";
-	if(nbPoints > 1) document.getElementById("affichagePoints").innerHTML = nbPoints + " points" + pourcentage;
-	else document.getElementById("affichagePoints").innerHTML = nbPoints + " point" + pourcentage;
-	nouvelleQuestion();
-}
-
-function nouvelleQuestion() {
-	nbEssais++;
-	personne = Math.floor(Math.random() * 6) + 1;
-	verbe = Math.floor(Math.random() * verbes.length);
-	document.getElementById("personne").innerHTML = personnes[personne];
-	document.getElementById("valeurProposee").placeholder = verbes[verbe][0];
-	document.getElementById("valeurProposee").value = "";
-}
-
-document.addEventListener("DOMContentLoaded", (event) => {
-	nouvelleQuestion();
-  });

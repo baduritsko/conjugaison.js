@@ -4,20 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Conjugaison</title>
-	<link href="style.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/contraste.css" rel="stylesheet">
 	<script type='text/javascript' src='conjugaison.js'></script>
-	<link href="logo-conjugaison-js.png" rel="icon" />
+	<link href="logo-conjugaison-js.png" rel="icon">
 </head>
 <body>
-	<div class="zoneJeu">
+	<div id="zoneJeu">
 		<h2>Conjugaison</h2>
-		<span id="personne" class="valeurProposee"></span>
-		<input type="text" id="valeurProposee" name="valeurProposee" class="valeurProposee" onchange="checkProposition();" placeholder="" />
-		<br />
-		<br />
+		<span id="personne"></span>
+		<input type="text" id="reponse" onchange="checkProposition();" placeholder="">
 		<div id="commentaire">C'est parti !</div>
-		<div id="affichagePoints">0 point</div>
+		<div id="score">0 point</div>
 	</div>
-	<div class="footerDisplay">conjugaison.js | GPL-3.0-or-later | https://github.com/baduritsko/conjugaison.js</div>
+	<div class="footer">
+		Pas de publicité, pas de suivi
+		<br>https://github.com/baduritsko/conjugaison.js
+	</div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+:root {
+	--background-color: darkslategrey;
+	--text-color: whitesmoke;
+	--border-color: white;
+}
+#zoneJeu {
+	background: linear-gradient(to right, blueviolet, orange);
+}

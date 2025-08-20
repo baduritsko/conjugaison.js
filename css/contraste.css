@@ -1,0 +1,11 @@
+:root {
+	--background-color: black;
+	--text-color: whitesmoke;
+	--border-color: white;
+}
+#zoneJeu {
+	background: black;
+}
+#reponse::placeholder {
+	color: var(--text-color);
+}
