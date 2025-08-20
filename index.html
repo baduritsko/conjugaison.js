@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Conjugaison</title>
 	<link href="css/style.css" rel="stylesheet">
-	<link href="css/contraste.css" rel="stylesheet">
+	<link href="css/standard.css" rel="stylesheet" id="themeCSS">
 	<script type='text/javascript' src='conjugaison.js'></script>
 	<link href="logo-conjugaison-js.png" rel="icon">
 </head>
@@ -16,7 +16,10 @@
 		<input type="text" id="reponse" onchange="checkProposition();" placeholder="">
 		<div id="commentaire">C'est parti !</div>
 		<div id="score">0 point</div>
+		<input type="checkbox" id="switchTheme" onclick="switchTheme();">
+		<label for="switchTheme">Affichage contrasté</label>
 	</div>
+
 	<div class="footer">
 		Pas de publicité, pas de suivi
 		<br>https://github.com/baduritsko/conjugaison.js

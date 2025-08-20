@@ -4,12 +4,18 @@ var nbEssais = 0;
 var nbPoints = 0;
 var commentaire;
 var reponseUtilisateur;
+var themeCSS = true;
 
 document.addEventListener("DOMContentLoaded", (event) => {
 	commentaire = document.getElementById("commentaire");
 	reponseUtilisateur = document.getElementById("reponse");
 	nouvelleQuestion();
   });
+
+function switchTheme() {
+	document.getElementById("themeCSS").href = themeCSS ? "css/contraste.css" : "css/standard.css";
+	themeCSS = !themeCSS;
+}
 
 function checkProposition() {
 	const valeurProposee = reponseUtilisateur.value.trim().toLowerCase();
