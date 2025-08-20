@@ -85,7 +85,91 @@ var verbes = [
 	["dire à l'imparfait", "disais", "disais", "disait", "disions", "disiez", "disaient"],
 	["dire au futur simple", "dirai", "diras", "dira", "dirons", "direz", "diront"],
 	["dire au passé simple", "dis", "dis", "dit", "dîmes", "dîtes", "dirent"],
-	["dire au passé composé", "ai dit", "as dit", "a dit", "avons dit", "avez dit", "ont dit"]
+	["dire au passé composé", "ai dit", "as dit", "a dit", "avons dit", "avez dit", "ont dit"],
+
+	// MANGER
+	["manger au présent", "mange", "manges", "mange", "mangeons", "mangez", "mangent"],
+	["manger à l'imparfait", "mangeais", "mangeais", "mangeait", "mangions", "mangiez", "mangeaient"],
+	["manger au futur simple", "mangerai", "mangeras", "mangera", "mangerons", "mangerez", "mangeront"],
+	["manger au passé simple", "mangeai", "mangeas", "mangea", "mangeâmes", "mangeâtes", "mangèrent"],
+	["manger au passé composé", "ai mangé", "as mangé", "a mangé", "avons mangé", "avez mangé", "ont mangé"],
+
+	// JOUER
+	["jouer au présent", "joue", "joues", "joue", "jouons", "jouez", "jouent"],
+	["jouer à l'imparfait", "jouais", "jouais", "jouait", "jouions", "jouiez", "jouaient"],
+	["jouer au futur simple", "jouerai", "joueras", "jouera", "jouerons", "jouerez", "joueront"],
+	["jouer au passé simple", "jouai", "jouas", "joua", "jouâmes", "jouâtes", "jouèrent"],
+	["jouer au passé composé", "ai joué", "as joué", "a joué", "avons joué", "avez joué", "ont joué"],
+
+	// AIMER
+	["aimer au présent", "aime", "aimes", "aime", "aimons", "aimez", "aiment"],
+	["aimer à l'imparfait", "aimais", "aimais", "aimait", "aimions", "aimiez", "aimaient"],
+	["aimer au futur simple", "aimerai", "aimeras", "aimera", "aimerons", "aimerez", "aimeront"],
+	["aimer au passé simple", "aimai", "aimas", "aima", "aimâmes", "aimâtes", "aimèrent"],
+	["aimer au passé composé", "ai aimé", "as aimé", "a aimé", "avons aimé", "avez aimé", "ont aimé"],
+
+	// PARLER
+	["parler au présent", "parle", "parles", "parle", "parlons", "parlez", "parlent"],
+	["parler à l'imparfait", "parlais", "parlais", "parlait", "parlions", "parliez", "parlaient"],
+	["parler au futur simple", "parlerai", "parleras", "parlera", "parlerons", "parlerez", "parleront"],
+	["parler au passé simple", "parlai", "parlas", "parla", "parlâmes", "parlâtes", "parlèrent"],
+	["parler au passé composé", "ai parlé", "as parlé", "a parlé", "avons parlé", "avez parlé", "ont parlé"],
+
+	// REGARDER
+	["regarder au présent", "regarde", "regardes", "regarde", "regardons", "regardez", "regardent"],
+	["regarder à l'imparfait", "regardais", "regardais", "regardait", "regardions", "regardiez", "regardaient"],
+	["regarder au futur simple", "regarderai", "regarderas", "regardera", "regarderons", "regarderez", "regarderont"],
+	["regarder au passé simple", "regardai", "regardas", "regarda", "regardâmes", "regardâtes", "regardèrent"],
+	["regarder au passé composé", "ai regardé", "as regardé", "a regardé", "avons regardé", "avez regardé", "ont regardé"],
+
+	// ÉCOUTER
+	["écouter au présent", "écoute", "écoutes", "écoute", "écoutons", "écoutez", "écoutent"],
+	["écouter à l'imparfait", "écoutais", "écoutais", "écoutait", "écoutions", "écoutiez", "écoutaient"],
+	["écouter au futur simple", "écouterai", "écouteras", "écoutera", "écouterons", "écouterez", "écouteront"],
+	["écouter au passé simple", "écoutai", "écoutas", "écouta", "écoutâmes", "écoutâtes", "écoutèrent"],
+	["écouter au passé composé", "ai écouté", "as écouté", "a écouté", "avons écouté", "avez écouté", "ont écouté"],
+
+	// LIRE
+	["lire au présent", "lis", "lis", "lit", "lisons", "lisez", "lisent"],
+	["lire à l'imparfait", "lisais", "lisais", "lisait", "lisions", "lisiez", "lisaient"],
+	["lire au futur simple", "lirai", "liras", "lira", "lirons", "lirez", "liront"],
+	["lire au passé simple", "lus", "lus", "lut", "lûmes", "lûtes", "lurents"],
+	["lire au passé composé", "ai lu", "as lu", "a lu", "avons lu", "avez lu", "ont lu"],
+
+	// ÉCRIRE
+	["écrire au présent", "écris", "écris", "écrit", "écrivons", "écrivez", "écrivent"],
+	["écrire à l'imparfait", "écrivais", "écrivais", "écrivait", "écrivions", "écriviez", "écrivaient"],
+	["écrire au futur simple", "écrirai", "écriras", "écrira", "écrirons", "écrirez", "écriront"],
+	["écrire au passé simple", "écrivis", "écrivis", "écrivit", "écrivîmes", "écrivîtes", "écrivirent"],
+	["écrire au passé composé", "ai écrit", "as écrit", "a écrit", "avons écrit", "avez écrit", "ont écrit"],
+
+	// DORMIR
+	["dormir au présent", "dors", "dors", "dort", "dormons", "dormez", "dorment"],
+	["dormir à l'imparfait", "dormais", "dormais", "dormait", "dormions", "dormiez", "dormaient"],
+	["dormir au futur simple", "dormirai", "dormiras", "dormira", "dormirons", "dormirez", "dormiront"],
+	["dormir au passé simple", "dormis", "dormis", "dormit", "dormîmes", "dormîtes", "dormirent"],
+	["dormir au passé composé", "ai dormi", "as dormi", "a dormi", "avons dormi", "avez dormi", "ont dormi"],
+
+	// MARCHER
+	["marcher au présent", "marche", "marches", "marche", "marchons", "marchez", "marchent"],
+	["marcher à l'imparfait", "marchais", "marchais", "marchait", "marchions", "marchiez", "marchaient"],
+	["marcher au futur simple", "marcherai", "marcheras", "marchera", "marcherons", "marcherez", "marcheront"],
+	["marcher au passé simple", "marchai", "marchas", "marcha", "marchâmes", "marchâtes", "marchèrent"],
+	["marcher au passé composé", "ai marché", "as marché", "a marché", "avons marché", "avez marché", "ont marché"],
+
+	// COURIR
+	["courir au présent", "cours", "cours", "court", "courons", "courez", "courent"],
+	["courir à l’imparfait", "courais", "courais", "courait", "courions", "couriez", "couraient"],
+	["courir au futur simple", "courrai", "courras", "courra", "courrons", "courrez", "courront"],
+	["courir au passé simple", "courus", "courus", "courut", "courûmes", "courûtes", "coururent"],
+	["courir au passé composé", "ai couru", "as couru", "a couru", "avons couru", "avez couru", "ont couru"],
+
+	// CHANTER
+	["chanter au présent", "chante", "chantes", "chante", "chantons", "chantez", "chantent"],
+	["chanter à l’imparfait", "chantais", "chantais", "chantait", "chantions", "chantiez", "chantaient"],
+	["chanter au futur simple", "chanterai", "chanteras", "chantera", "chanterons", "chanterez", "chanteront"],
+	["chanter au passé simple", "chantai", "chantas", "chanta", "chantâmes", "chantâtes", "chantèrent"],
+	["chanter au passé composé", "ai chanté", "as chanté", "a chanté", "avons chanté", "avez chanté", "ont chanté"]
 ];
 
 
